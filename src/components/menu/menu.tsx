@@ -14,27 +14,27 @@ const Container = styled.div`
 const Logo = styled.div`
   height: 48px;
   width: 48px;
-  padding-top: 27px;
+  margin-top: 27px;
 `;
 
 const ArrowsRight = styled.div`
   height: 32px;
   width: 32px;
-  padding-top: 60px;
+  margin-top: 60px;
   color: ${({ theme }) => theme.colors.menuItem};
 `;
 
 const Grid = styled.div`
   height: 32px;
   width: 32px;
-  padding-top: 100px;
+  margin-top: 100px;
   color: ${({ theme }) => theme.colors.menuItem};
 `;
 
 const Globe = styled.div`
   height: 32px;
   width: 32px;
-  padding-top: 32px;
+  margin-top: 32px;
   color: ${({ theme }) => theme.colors.menuItem};
 `;
 
@@ -55,8 +55,8 @@ const User = styled.div`
   height: 32px;
   width: 32px;
   color: ${({ theme }) => theme.colors.menuItem};
-  padding-top: 32px;
-  padding-bottom: 27px;
+  margin-top: 32px;
+  margin-bottom: 27px;
 `;
 
 export const Menu = () => (

@@ -1,6 +1,8 @@
 import React, { VFC } from "react";
 import styled from "styled-components";
 import { Card } from "../card/card";
+import { PerformanceLineChart } from "../performance-line-chart/performance-line-chart";
+import { PerformanceList } from "../performance-list/performance-list";
 
 const Container = styled.div`
   display: grid;
@@ -34,7 +36,11 @@ interface Props {
 export const Performance: VFC<Props> = ({ className }) => (
   <Container className={className}>
     <PieChartCard />
-    <LineChartCard />
-    <ListCard />
+    <LineChartCard>
+      <PerformanceLineChart />
+    </LineChartCard>
+    <ListCard>
+      <PerformanceList />
+    </ListCard>
   </Container>
 );

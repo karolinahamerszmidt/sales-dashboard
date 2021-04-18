@@ -5,6 +5,7 @@ import { Card } from "../card/card";
 import { Menu } from "../menu/menu";
 import { Performance } from "../performance/performance";
 import { Best } from "../best/best";
+import { GlobalStyle } from "../../style/global-style";
 const Container = styled.div`
   background-color: ${({ theme }) => theme.colors.background};
   width: 100vw;
@@ -33,6 +34,7 @@ const StyledBest = styled(Best)`
 
 export const Layout = () => (
   <ThemeProvider theme={lightTheme}>
+    <GlobalStyle />
     <Container>
       <Menu />
       <Content>
