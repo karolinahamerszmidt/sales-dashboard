@@ -10,6 +10,7 @@ import { ReactComponent as Bell } from "./bell.svg";
 import { ReactComponent as User } from "./user.svg";
 import { ReactComponent as TriangleUp } from "./triangle-up.svg";
 import { ReactComponent as TriangleDown } from "./triangle-down.svg";
+import { ReactComponent as BarChart } from "./bar-chart.svg";
 
 const iconComponents = {
   logo: Logo,
@@ -23,6 +24,7 @@ const iconComponents = {
   user: User,
   "triangle-up": TriangleUp,
   "triangle-down": TriangleDown,
+  "bar-chart": BarChart,
 };
 export type IconName = keyof typeof iconComponents;
 

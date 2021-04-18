@@ -119,6 +119,11 @@ const Dynamics: VFC<DynamicsProps> = ({ dynamics }) => (
   </DynamicsContainer>
 );
 
+const ItemName = styled.div`
+  width: 100%;
+  font-weight: 600;
+`;
+
 interface ItemProps {
   parameter: string;
   total: string;
@@ -155,10 +160,12 @@ const Item = ({
   return (
     <TR>
       <TD>
-        <FlexBox>
-          <Dot color={dotColor} />
-          {parameter}
-        </FlexBox>
+        <ItemName>
+          <FlexBox>
+            <Dot color={dotColor} />
+            {parameter}
+          </FlexBox>
+        </ItemName>
       </TD>
       <TD>{total}</TD>
       <TD>{today}</TD>

@@ -1,6 +1,6 @@
 import React, { VFC } from "react";
 import styled from "styled-components";
-import { Card } from "../card/card";
+import { BestCard } from "../best-card/best-card";
 
 const Container = styled.div`
   display: grid;
@@ -17,17 +17,19 @@ const Container = styled.div`
   row-gap: 24px;
 `;
 
-const BCard = styled(Card)`
+const BCard = styled(BestCard)`
   grid-area: b;
 `;
 
-const ECard = styled(Card)`
+const ECard = styled(BestCard)`
   grid-area: e;
 `;
-const SCard = styled(Card)`
+
+const SCard = styled(BestCard)`
   grid-area: s;
 `;
-const TCard = styled(Card)`
+
+const TCard = styled(BestCard)`
   grid-area: t;
 `;
 
@@ -35,11 +37,13 @@ interface Props {
   className?: string;
 }
 
-export const Best: VFC<Props> = ({ className }) => (
-  <Container className={className}>
-    <BCard />
-    <ECard />
-    <SCard />
-    <TCard />
-  </Container>
-);
+export const Best: VFC<Props> = ({ className }) => {
+  return (
+    <Container className={className}>
+      <BCard cardLetter="B" />
+      <ECard cardLetter="E" />
+      <SCard cardLetter="S" />
+      <TCard cardLetter="T" />
+    </Container>
+  );
+};
