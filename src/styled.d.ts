@@ -18,8 +18,10 @@ declare module "styled-components" {
       | "chart2"
       | "chart3"
       | "chart4"
-      | "chart5",
+      | "chart5"
+      | "chartTooltip",
       string
     >;
+    shadows: Record<"card", string>;
   }
 }

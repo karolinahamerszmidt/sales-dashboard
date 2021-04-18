@@ -119,7 +119,7 @@ const Dynamics: VFC<DynamicsProps> = ({ dynamics }) => (
   </DynamicsContainer>
 );
 
-interface Item {
+interface ItemProps {
   parameter: string;
   total: string;
   today: string;
@@ -137,7 +137,7 @@ const Item = ({
   dynamics,
   dotType,
   rankType,
-}: Item) => {
+}: ItemProps) => {
   const theme = useTheme();
 
   const dotColor = theme.colors[dotType];
@@ -172,7 +172,7 @@ const Item = ({
   );
 };
 
-const items: Item[] = [
+const items: ItemProps[] = [
   {
     parameter: "Views",
     total: "195 934",

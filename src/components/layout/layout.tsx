@@ -1,7 +1,6 @@
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { lightTheme } from "../../style/theme";
-import { Card } from "../card/card";
 import { Menu } from "../menu/menu";
 import { Performance } from "../performance/performance";
 import { Best } from "../best/best";
