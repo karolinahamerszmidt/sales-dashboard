@@ -3,6 +3,6 @@ import "styled-components";
 
 declare module "styled-components" {
   export interface DefaultTheme extends Theme {
-    colors: Record<"background" | "menuItem", string>;
+    colors: Record<"background" | "menuItem" | "cardBackground", string>;
   }
 }
