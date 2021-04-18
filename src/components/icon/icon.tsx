@@ -11,6 +11,7 @@ import { ReactComponent as User } from "./user.svg";
 import { ReactComponent as TriangleUp } from "./triangle-up.svg";
 import { ReactComponent as TriangleDown } from "./triangle-down.svg";
 import { ReactComponent as BarChart } from "./bar-chart.svg";
+import { ReactComponent as Award } from "./award.svg";
 
 const iconComponents = {
   logo: Logo,
@@ -25,6 +26,7 @@ const iconComponents = {
   "triangle-up": TriangleUp,
   "triangle-down": TriangleDown,
   "bar-chart": BarChart,
+  award: Award,
 };
 export type IconName = keyof typeof iconComponents;
 
