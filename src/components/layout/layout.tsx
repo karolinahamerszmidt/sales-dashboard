@@ -1,6 +1,7 @@
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { lightTheme } from "../../style/theme";
+import { Menu } from "../menu/menu";
 const Container = styled.div`
   background-color: ${({ theme }) => theme.colors.background};
   width: 100vw;
@@ -9,6 +10,8 @@ const Container = styled.div`
 
 export const Layout = () => (
   <ThemeProvider theme={lightTheme}>
-    <Container>kot</Container>
+    <Container>
+      <Menu />
+    </Container>
   </ThemeProvider>
 );

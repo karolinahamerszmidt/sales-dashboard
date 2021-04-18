@@ -1,11 +1,8 @@
 /// <reference types="styled-components/cssprop"/>
-import "styled-components"
+import "styled-components";
 
-declare module 'styled-components' {
-    export interface DefaultTheme extends Theme {
-        colors: Record<
-        'background',
-        string
-        >;
-    }
+declare module "styled-components" {
+  export interface DefaultTheme extends Theme {
+    colors: Record<"background" | "menuItem", string>;
+  }
 }
