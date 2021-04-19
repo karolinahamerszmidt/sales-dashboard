@@ -2,7 +2,7 @@
 
 Example sales dashboard by [_Karolina Hamerszmidt_](https://karolina.hamerszmidt.eu/)
 
-<a href="./promo.png"><img src="./promo.resized.png" width="100%" /></a>
+<a href="https://github.com/karolinahamerszmidt/sales-dashboard/blob/master/promo.png?raw=true"><img src="./promo.resized.png" width="100%" /></a>
 
 Demo here: https://sales-dashboard.hamerszmidt.eu/
 
@@ -24,7 +24,7 @@ Designed this dashboard as a weekend redesign exercise of https://www.nbeyond.nl
 
 Figma file with exploration of dashboard ideas for this exercise: https://www.figma.com/file/TOTqAwctG38Bc2NDoIsiur/Sales-Dashboard
 
-<a href="./figma.png"><img src="./figma.resized.png" width="100%" /></a>
+<a href="https://github.com/karolinahamerszmidt/sales-dashboard/blob/master/figma.png?raw=true"><img src="./figma.resized.png" width="100%" /></a>
 
 <br />
 
