@@ -1,4 +1,5 @@
 import React, { VFC } from "react";
+import { useMediaQuery } from "react-responsive";
 import {
   CartesianGrid,
   Line,
@@ -8,6 +9,7 @@ import {
   XAxis,
 } from "recharts";
 import styled, { useTheme } from "styled-components";
+import { forDesktopUp } from "../../style/media-queries";
 
 const Container = styled.div`
   width: 100%;
@@ -39,6 +41,7 @@ export const BestLineChart: VFC<Props> = ({
   data,
 }) => {
   const theme = useTheme();
+  const isDesktopUp = useMediaQuery({ query: forDesktopUp });
 
   return (
     <Container>
@@ -49,8 +52,8 @@ export const BestLineChart: VFC<Props> = ({
           data={data}
           margin={{
             top: 30,
-            right: 30,
-            left: 30,
+            right: isDesktopUp ? 30 : 10,
+            left: isDesktopUp ? 30 : 10,
             bottom: 10,
           }}
         >
@@ -74,7 +77,7 @@ export const BestLineChart: VFC<Props> = ({
           <XAxis
             dataKey="name"
             tick={{ fontSize: 8 }}
-            interval={0}
+            interval={isDesktopUp ? 0 : undefined}
             axisLine={false}
             tickLine={false}
           />

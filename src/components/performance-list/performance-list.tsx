@@ -1,5 +1,7 @@
 import React, { VFC } from "react";
+import { useMediaQuery } from "react-responsive";
 import styled, { useTheme } from "styled-components";
+import { forDesktopUp } from "../../style/media-queries";
 import { Header } from "../header/header";
 import { Icon } from "../icon/icon";
 import { Label } from "../label/label";
@@ -144,6 +146,7 @@ const Item = ({
   rankType,
 }: ItemProps) => {
   const theme = useTheme();
+  const isDesktopUp = useMediaQuery({ query: forDesktopUp });
 
   const dotColor = theme.colors[dotType];
   const rankColor =
@@ -169,9 +172,11 @@ const Item = ({
       </TD>
       <TD>{total}</TD>
       <TD>{today}</TD>
-      <TD>
-        <Rank level={status} color={rankColor} />
-      </TD>
+      {isDesktopUp ? (
+        <TD>
+          <Rank level={status} color={rankColor} />
+        </TD>
+      ) : null}
       <TD>
         <Dynamics dynamics={dynamics} />
       </TD>
@@ -290,36 +295,42 @@ const items: ItemProps[] = [
   },
 ];
 
-export const PerformanceList = () => (
-  <Container>
-    <Header>Summary</Header>
-    <Space size={22} />
+export const PerformanceList = () => {
+  const isDesktopUp = useMediaQuery({ query: forDesktopUp });
 
-    <Table>
-      <THead>
-        <TR>
-          <TH>
-            <Label>Parameter</Label>
-          </TH>
-          <TH>
-            <Label>Total</Label>
-          </TH>
-          <TH>
-            <Label>Today</Label>
-          </TH>
-          <TH>
-            <Label>Status</Label>
-          </TH>
-          <TH>
-            <Label>Dynamics</Label>
-          </TH>
-        </TR>
-      </THead>
-      <TBody>
-        {items.map((item) => (
-          <Item key={item.parameter} {...item} />
-        ))}
-      </TBody>
-    </Table>
-  </Container>
-);
+  return (
+    <Container>
+      <Header>Summary</Header>
+      <Space size={22} />
+
+      <Table>
+        <THead>
+          <TR>
+            <TH>
+              <Label>Parameter</Label>
+            </TH>
+            <TH>
+              <Label>Total</Label>
+            </TH>
+            <TH>
+              <Label>Today</Label>
+            </TH>
+            {isDesktopUp ? (
+              <TH>
+                <Label>Status</Label>
+              </TH>
+            ) : null}
+            <TH>
+              <Label>Dynamics</Label>
+            </TH>
+          </TR>
+        </THead>
+        <TBody>
+          {items.map((item) => (
+            <Item key={item.parameter} {...item} />
+          ))}
+        </TBody>
+      </Table>
+    </Container>
+  );
+};

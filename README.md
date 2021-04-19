@@ -1,3 +1,33 @@
+# Sales Dashboard
+
+Example sales dashboard by [_Karolina Hamerszmidt_](https://karolina.hamerszmidt.eu/)
+
+<a href="./promo.png"><img src="./promo.resized.png" width="100%" /></a>
+
+Demo here: https://sales-dashboard.hamerszmidt.eu/
+
+**Features:**
+
+- responsive design (mobile first + tablet portrait + tablet landscape + desktop)
+- menu animations
+- custom charts (recharts library)
+- written in TypeScript
+- light & dark theme mode
+- SVG icons
+- nbeyond logo as SVG
+- PWA manifest
+- styled components (css in js)
+- continous deployment to Netlify
+- basic Storybook setup
+
+Designed this dashboard as a weekend redesign exercise of https://www.nbeyond.nl/ dashboard.
+
+Figma file with exploration of dashboard ideas for this exercise: https://www.figma.com/file/TOTqAwctG38Bc2NDoIsiur/Sales-Dashboard
+
+<a href="./figma.png"><img src="./figma.resized.png" width="100%" /></a>
+
+<br />
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

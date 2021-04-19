@@ -1,5 +1,7 @@
-import React, { VFC } from "react";
+import React, { memo, VFC } from "react";
+import { useMediaQuery } from "react-responsive";
 import styled, { useTheme } from "styled-components";
+import { forDesktopUp } from "../../style/media-queries";
 import { getRandomInteger } from "../../utils/get-random-integer";
 import {
   BestLineChart,
@@ -29,6 +31,7 @@ const Letter = styled.div`
 const Container = styled(Card)`
   position: relative;
   width: 100%;
+  min-height: 200px;
   display: flex;
   align-items: center;
   padding: 10px 30px;
@@ -39,8 +42,9 @@ interface Props {
   cardLetter: "B" | "E" | "S" | "T";
 }
 
-export const BestCard: VFC<Props> = ({ className, cardLetter }) => {
+export const BestCard: VFC<Props> = memo(({ className, cardLetter }) => {
   const theme = useTheme();
+  const isDesktopUp = useMediaQuery({ query: forDesktopUp });
 
   const months = [
     "Jan",
@@ -136,7 +140,9 @@ export const BestCard: VFC<Props> = ({ className, cardLetter }) => {
   return (
     <Container className={className}>
       <Letter>{cardLetter}</Letter>
-      <BestPieChart percentage={pieChartPercentage} color={pieChartColor} />
+      {isDesktopUp ? (
+        <BestPieChart percentage={pieChartPercentage} color={pieChartColor} />
+      ) : null}
       <BestLineChart
         line1Color={theme.colors.chart1}
         line2Color={theme.colors.chart2}
@@ -148,4 +154,4 @@ export const BestCard: VFC<Props> = ({ className, cardLetter }) => {
       <BestList items={listItems} />
     </Container>
   );
-};
+});

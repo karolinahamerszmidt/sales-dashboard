@@ -19,7 +19,9 @@ declare module "styled-components" {
       | "chart3"
       | "chart4"
       | "chart5"
-      | "chartTooltip",
+      | "chartTooltip"
+      | "menuItemActive"
+      | "menuItemDefault",
       string
     >;
     shadows: Record<"card", string>;

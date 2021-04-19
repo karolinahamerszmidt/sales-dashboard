@@ -49,13 +49,14 @@ const Container = styled.div`
 interface Props {
   percentage: number;
   color: string;
+  className?: string;
 }
 
-export const BestPieChart: VFC<Props> = ({ percentage, color }) => {
+export const BestPieChart: VFC<Props> = ({ percentage, color, className }) => {
   const theme = useTheme();
 
   return (
-    <Container>
+    <Container className={className}>
       <ResponsiveContainer width="100%" height="100%">
         <PieChart width={100} height={100}>
           <Pie
@@ -73,8 +74,8 @@ export const BestPieChart: VFC<Props> = ({ percentage, color }) => {
             dataKey="value"
             cornerRadius="50%"
           >
-            <Cell fill={color} />
-            <Cell fill={theme.colors.background} />
+            <Cell fill={color} stroke="none" />
+            <Cell fill={theme.colors.background} stroke="none" />
           </Pie>
         </PieChart>
       </ResponsiveContainer>

@@ -1,5 +1,7 @@
 import React, { VFC } from "react";
+import { useMediaQuery } from "react-responsive";
 import styled from "styled-components";
+import { forDesktopUp } from "../../style/media-queries";
 
 const CurrentValue = styled.div``;
 const PreviousValue = styled.div`
@@ -45,26 +47,32 @@ interface Props {
   }[];
 }
 
-export const BestList: VFC<Props> = ({ className, items }) => (
-  <Container className={className}>
-    <Table>
-      <TBody>
-        {items.map((item) => (
-          <TR key={item.name}>
-            <TD>
-              <Name>
-                <Dot color={item.color} /> {item.name}
-              </Name>
-            </TD>
-            <TD>
-              <PreviousValue>{item.previousValue}</PreviousValue>
-            </TD>
-            <TD>
-              <CurrentValue>{item.currentValue}</CurrentValue>
-            </TD>
-          </TR>
-        ))}
-      </TBody>
-    </Table>
-  </Container>
-);
+export const BestList: VFC<Props> = ({ className, items }) => {
+  const isDesktopUp = useMediaQuery({ query: forDesktopUp });
+
+  return (
+    <Container className={className}>
+      <Table>
+        <TBody>
+          {items.map((item) => (
+            <TR key={item.name}>
+              <TD>
+                <Name>
+                  <Dot color={item.color} /> {item.name}
+                </Name>
+              </TD>
+              {isDesktopUp ? (
+                <TD>
+                  <PreviousValue>{item.previousValue}</PreviousValue>
+                </TD>
+              ) : null}
+              <TD>
+                <CurrentValue>{item.currentValue}</CurrentValue>
+              </TD>
+            </TR>
+          ))}
+        </TBody>
+      </Table>
+    </Container>
+  );
+};

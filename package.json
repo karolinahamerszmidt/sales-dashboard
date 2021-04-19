@@ -12,7 +12,9 @@
     "@types/react-dom": "^17.0.0",
     "polished": "^4.1.1",
     "react": "^17.0.2",
+    "react-dark-mode-toggle": "^0.2.0",
     "react-dom": "^17.0.2",
+    "react-responsive": "^8.2.0",
     "react-scripts": "4.0.3",
     "recharts": "^2.0.9",
     "styled-components": "^5.2.3",
@@ -62,6 +64,7 @@
     "@storybook/node-logger": "^6.2.8",
     "@storybook/preset-create-react-app": "^3.1.7",
     "@storybook/react": "^6.2.8",
+    "@types/react-responsive": "^8.0.2",
     "@types/styled-components": "^5.1.9",
     "prettier": "2.2.1"
   },

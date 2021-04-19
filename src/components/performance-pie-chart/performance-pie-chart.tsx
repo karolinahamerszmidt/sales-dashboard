@@ -232,8 +232,8 @@ export const PerformancePieChart = () => {
                 dataKey="value"
                 cornerRadius="50%"
               >
-                <Cell fill={pie.color} />
-                <Cell fill={theme.colors.background} />
+                <Cell fill={pie.color} stroke="none" />
+                <Cell fill={theme.colors.background} stroke="none" />
               </Pie>
             ))}
           </PieChart>

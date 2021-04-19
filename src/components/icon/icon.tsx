@@ -15,7 +15,7 @@ import { ReactComponent as Award } from "./award.svg";
 
 const iconComponents = {
   logo: Logo,
-  arrowsRight: ArrowsRight,
+  "arrows-right": ArrowsRight,
   grid: Grid,
   globe: Globe,
   list: List,
