@@ -31,7 +31,7 @@ export const ThemeModeProvider: FC = ({ children }) => {
 
 export const lightTheme: DefaultTheme = {
   colors: {
-    background: "#F2F5FA",
+    background: "#fdf5ff",
     backgroundDark: "#DADFF2",
     menuItem: "#B7B5CC",
     cardBackground: "white",
